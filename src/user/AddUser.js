@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Card from "../common/Card";
 import classes from "./AddUser.module.css";
 import Button from "../common/Button";
+import ErrorModule from "../common/ErrorModule";
 
 const AddUser = (props) => {
   const [enteredUserName, setEnteredUserName] = useState();
@@ -19,10 +20,10 @@ const AddUser = (props) => {
     }
 
     //doing something
-    props.onAddUser(enteredUserName ,enteredAge)
+    props.onAddUser(enteredUserName, enteredAge);
 
-    setEnteredUserName('');
-    setEnteredAge('');
+    setEnteredUserName("");
+    setEnteredAge("");
   };
 
   const UserNameChangeHandler = (event) => {
@@ -34,25 +35,28 @@ const AddUser = (props) => {
   };
 
   return (
-    <Card className={classes.input}>
-      <form onSubmit={AddUserHandler}>
-        <label htmlFor="username">Username</label>
-        <input
-          id="username"
-          type="text"
-          value={enteredUserName}
-          onChange={UserNameChangeHandler}
-        />
-        <label htmlFor="age">Age (Years)</label>
-        <input
-          id="age"
-          type="number"
-          value={enteredAge}
-          onChange={AgeChangeHandler}
-        />
-        <Button type="submit">Add User</Button>
-      </form>
-    </Card>
+    <div>
+      <ErrorModule title="Error" message="Error Message" />
+      <Card className={classes.input}>
+        <form onSubmit={AddUserHandler}>
+          <label htmlFor="username">Username</label>
+          <input
+            id="username"
+            type="text"
+            value={enteredUserName}
+            onChange={UserNameChangeHandler}
+          />
+          <label htmlFor="age">Age (Years)</label>
+          <input
+            id="age"
+            type="number"
+            value={enteredAge}
+            onChange={AgeChangeHandler}
+          />
+          <Button type="submit">Add User</Button>
+        </form>
+      </Card>
+    </div>
   );
 };
 
