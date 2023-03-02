@@ -2,7 +2,9 @@ import React from "react";
 
 const AddUser = (props) => {
     const AddUserHandler = (event) =>{
-    }
+        event.preventDefault();
+        }
+    
   return (
     <form onSubmit={AddUserHandler}>
       <label html="username">Username</label>
