@@ -8,6 +8,7 @@ function App() {
   const addUserbyInput = (uName, uAge) => {
     setUserList((prevUserList) => {
       const user = {
+        id:Math.random().toString(),
         name: uName,
         age: uAge,
       };
