@@ -21,8 +21,8 @@ const AddUser = (props) => {
     //doing something
     props.onAddUser(enteredUserName ,enteredAge)
 
-    setEnteredUserName("");
-    setEnteredAge("");
+    setEnteredUserName('');
+    setEnteredAge('');
   };
 
   const UserNameChangeHandler = (event) => {
