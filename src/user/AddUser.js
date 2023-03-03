@@ -37,8 +37,11 @@ const AddUser = (props) => {
     //doing something
     props.onAddUser(enteredUserName, enteredAge);
 
+    //Note: For input tag controller : as internal sate is controller by react 
     // setEnteredUserName("");
     // setEnteredAge("");
+
+    //Note: For input tag uncontroller input internal sate is not control by react as we are using manage ref 
     nameInputRef.current.value = "";
     ageInputRef.current.value = "";
   };
