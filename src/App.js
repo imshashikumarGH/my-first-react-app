@@ -16,10 +16,10 @@ function App() {
     });
   };
   return (
-    <div>
+    <>
       <AddUser onAddUser={addUserbyInput}></AddUser>
       <UserList users={userList} />
-    </div>
+    </>
   );
 }
 
