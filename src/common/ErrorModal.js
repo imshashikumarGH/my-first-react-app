@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "./Button.js";
 import Card from "./Card";
-import classes from "./ErrorModule.module.css";
+import classes from "./ErrorModal.module.css";
 
 const ErrorModule = (props) => {
   return (

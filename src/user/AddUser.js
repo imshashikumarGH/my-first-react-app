@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Card from "../common/Card";
 import classes from "./AddUser.module.css";
 import Button from "../common/Button";
-import ErrorModule from "../common/ErrorModule";
+import ErrorModal from "../common/ErrorModal";
 import Wrapper from "../helper/Wrapper";
 
 const AddUser = (props) => {
@@ -50,7 +50,7 @@ const AddUser = (props) => {
 
   return (
     <Wrapper>
-      {error && <ErrorModule title={error.title} message={error.message} onConfirm = {ErrorHandler} />}
+      {error && <ErrorModal title={error.title} message={error.message} onConfirm = {ErrorHandler} />}
       <Card className={classes.input}>
         <form onSubmit={AddUserHandler}>
           <label htmlFor="username">Username</label>
